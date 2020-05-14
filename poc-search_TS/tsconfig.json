@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/_app.tsx.bk",
+    "pages/_app.tsx",
     "i18n.js"
   ]
 }
