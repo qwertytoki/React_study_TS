@@ -43,10 +43,10 @@ const Detail = ({ member, t }) => {
       </table>
       <div className="text-center">
         <button className="btn btn-outline-secondary" onClick={handleBack}>
-          Back
+          {t("Back")}
         </button>
         <Link href={`/detail_edit?id=${member.id}`}>
-          <button className="btn btn-outline-primary">Edit</button>
+          <button className="btn btn-outline-primary">{t("Edit")}</button>
         </Link>
       </div>
     </Layout>
@@ -54,11 +54,7 @@ const Detail = ({ member, t }) => {
 };
 
 Detail.getInitialProps = ({ query }) => {
-  return { member: getMember(query.id) };
-};
-
-Detail.propTypes = {
-  t: PropTypes.func.isRequired,
+  return { member: getMember(query.id), t: PropTypes.func.isRequired };
 };
 
 export default withTranslation("common")(Detail);

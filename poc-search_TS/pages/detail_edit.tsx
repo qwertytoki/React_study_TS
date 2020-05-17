@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useRouter, Router } from "next/router";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Layout from "../components/Layout";
 import getMember from "../components/getMember";
 import updateMember from "../components/updateMember";
+import PropTypes from "prop-types";
+import { i18n, Link, withTranslation } from "../i18n";
 
 const Edit = ({ member }) => {
   console.log(member);
@@ -173,4 +174,12 @@ function getSelectedHobbies(member) {
   return member.hobby;
 }
 
-export default Edit;
+Edit.getInitialProps = ({ query }) => {
+  return { member: getMember(query.id) };
+};
+
+Edit.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default withTranslation("common")(Edit);
