@@ -1,6 +1,6 @@
 {
   "h1": "シンプルなサンプル",
-  "switch_language": "Language switching",
+  "switch_language": "Switch to English",
   "member_list": "メンバー一覧",
   "id": "ID",
   "name": "名前",
@@ -9,8 +9,15 @@
   "hobby": "趣味",
   "link": "リンク",
   "member_detail": "メンバー詳細",
-  "": "",
-  "": "",
-  "": "",
-  "": ""
+  "Search": "検索",
+  "Singapore": "シンガポール",
+  "China": "中国",
+  "Japan": "日本",
+  "Tokyo": "東京",
+  "Name": "名前",
+  "Edit": "編集",
+  "Cancel": "キャンセル",
+  "Save": "保存",
+  "Back": "戻る",
+  "User Edit": "ユーザー編集"
 }
