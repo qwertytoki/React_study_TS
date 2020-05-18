@@ -97,7 +97,7 @@ const Search = ({ search, t }) => {
           </div>
         </div>
         <div className="text-right">
-          <button className="btn btn-outline-primary">Search</button>
+          <button className="btn btn-outline-primary">{t("Search")}</button>
         </div>
       </div>
     </form>
