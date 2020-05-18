@@ -42,7 +42,7 @@ const Edit = ({ member, t }) => {
     router.back();
   };
   return (
-    <Layout title="User Edit">
+    <Layout title={t("User Edit")}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <table className="table">
