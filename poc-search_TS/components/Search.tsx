@@ -36,7 +36,7 @@ const Search = ({ search, t }) => {
                   value="Singapore"
                   ref={register}
                 />
-                Singapore
+                {t("Singapore")}
               </label>
             </div>
 
@@ -49,7 +49,7 @@ const Search = ({ search, t }) => {
                   value="China"
                   ref={register}
                 />
-                China
+                {t("China")}
               </label>
             </div>
             <div className="form-check form-check-inline">
@@ -61,7 +61,7 @@ const Search = ({ search, t }) => {
                   value="Japan"
                   ref={register}
                 />
-                Japan
+                {t("Japan")}
               </label>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Search = ({ search, t }) => {
                     value="Singapore"
                     ref={register}
                   />
-                  Singapore
+                  {t("Singapore")}
                 </label>
               </div>
 
@@ -90,7 +90,7 @@ const Search = ({ search, t }) => {
                     value="Tokyo"
                     ref={register}
                   />
-                  Tokyo
+                  {t("Tokyo")}
                 </label>
               </div>
             </div>
