@@ -7,7 +7,7 @@ import updateMember from "../components/updateMember";
 import PropTypes from "prop-types";
 import { i18n, Link, withTranslation } from "../i18n";
 
-const Edit = ({ member }) => {
+const Edit = ({ member, t }) => {
   console.log(member);
   const router = useRouter();
 
@@ -52,12 +52,12 @@ const Edit = ({ member }) => {
                 <td className="col-sm-10 text-center">{member.id}</td>
               </tr>
               <tr className="d-flex">
-                <th className="col-sm-2">Name</th>
+                <th className="col-sm-2">{t("Name")}</th>
                 <td className="col-sm-10 text-center">
                   <input
                     className="form-control"
                     type="text"
-                    placeholder="Name"
+                    placeholder={t("Name")}
                     name="name"
                     ref={register}
                     defaultValue={member.name}
@@ -65,7 +65,7 @@ const Edit = ({ member }) => {
                 </td>
               </tr>
               <tr className="d-flex">
-                <th className="col-sm-2">Nationality</th>
+                <th className="col-sm-2">{t("nationality")}</th>
                 <td className="col-sm-10 text-center">
                   <select
                     className="form-control"
@@ -73,14 +73,14 @@ const Edit = ({ member }) => {
                     ref={register}
                     defaultValue={member.nationality}
                   >
-                    <option value="Singapore">Singapore</option>
-                    <option value="China">China</option>
-                    <option value="Japan">Japan</option>
+                    <option value="Singapore">{t("Singapore")}</option>
+                    <option value="China">{t("China")}</option>
+                    <option value="Japan">{t("Japan")}</option>
                   </select>
                 </td>
               </tr>
               <tr className="d-flex">
-                <th className="col-sm-2">Office</th>
+                <th className="col-sm-2">{t("office")}</th>
                 <td className="col-sm-10 text-center">
                   <select
                     className="form-control"
@@ -88,13 +88,13 @@ const Edit = ({ member }) => {
                     ref={register}
                     defaultValue={member.office}
                   >
-                    <option value="Tokyo">Tokyo</option>
-                    <option value="Singapore">Singapore</option>
+                    <option value="Tokyo">{t("Tokyo")}</option>
+                    <option value="Singapore">{t("Singapore")}</option>
                   </select>
                 </td>
               </tr>
               <tr className="d-flex">
-                <th className="col-sm-2">Hobbies</th>
+                <th className="col-sm-2">{t("hobby")}</th>
                 <td className="col-sm-5 text-center">
                   {hobbies.map((hobby, i) => (
                     <div>
@@ -132,9 +132,9 @@ const Edit = ({ member }) => {
               type="button"
               onClick={handleBack}
             >
-              Cancel
+              {t("Cancel")}
             </button>
-            <button className="btn btn-outline-primary">Save</button>
+            <button className="btn btn-outline-primary">{t("Save")}</button>
           </div>
         </div>
       </form>

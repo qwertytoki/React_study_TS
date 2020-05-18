@@ -18,7 +18,7 @@ const Search = ({ search, t }) => {
               id="nameid"
               className="form-control"
               type="text"
-              placeholder="Name"
+              placeholder={t("Name")}
               name="name"
               ref={register}
             />
