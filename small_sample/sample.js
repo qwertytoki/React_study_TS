@@ -16,27 +16,40 @@ const obj = { foo, bar: 45 };
 console.log(obj);
 
 // async
-// const wakeup = (ms) => {
-//   setTimeout(() => {
-//     console.log("woke up!");
-//   }, ms);
-// };
-// const greet = () => {
-//   console.log("good night!");
-//   wakeup(2000);
-//   console.log("good morning!");
-// };
-// greet();
+const wakeup = (ms) => {
+  setTimeout(() => {
+    console.log("woke up!");
+  }, ms);
+};
+const greet = () => {
+  console.log("good night!");
+  wakeup(2000);
+  console.log("good morning!");
+};
+greet();
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const greet = async () => {
+const sleepPromise = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const greetPromise = async () => {
   console.log("お や す み ");
   try {
-    await sleep(2000);
+    await sleepPromise(2000);
     console.log("起 き た ");
     console.log("お は よ う ! ");
   } catch (err) {
     console.error("睡 眠 例 外 で す : ", err);
   }
 };
-greet();
+greetPromise();
+
+const sleepAsync = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const greetAsync = async () => {
+  console.log("お や す み ");
+  try {
+    await sleepAsync(2000);
+    console.log("起 き た ");
+    console.log("お は よ う ! ");
+  } catch (err) {
+    console.error("睡 眠 例 外 で す : ", err);
+  }
+};
+greetAsync();
