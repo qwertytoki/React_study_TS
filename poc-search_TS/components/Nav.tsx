@@ -8,6 +8,9 @@ const Nav = ({ t }) => (
         <img src="/static/workoutholic.png" alt="workoutholic" height="50" />
       </a>
     </Link>
+    <Link href="/blogs">
+      <a>Blogs</a>
+    </Link>
     <a
       onClick={() => i18n.changeLanguage(i18n.language === "en" ? "ja" : "en")}
     >
