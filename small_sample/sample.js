@@ -29,16 +29,19 @@ const greet = () => {
 greet();
 
 const sleepPromise = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const greetPromise = async () => {
-  console.log("お や す み ");
-  try {
-    await sleepPromise(2000);
-    console.log("起 き た ");
-    console.log("お は よ う ! ");
-  } catch (err) {
-    console.error("睡 眠 例 外 で す : ", err);
-  }
+
+const greetPromise = () => {
+  console.log("oyasumi!");
+  sleepPromise(2000)
+    .then(() => {
+      console.log("okita!");
+      console.log("ohayo!");
+    })
+    .catch((err) => {
+      console.error("suimin error!:", err);
+    });
 };
+
 greetPromise();
 
 const sleepAsync = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
